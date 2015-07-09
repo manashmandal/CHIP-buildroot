@@ -1,0 +1,20 @@
+diff --git a/fs/ubifs/xattr.c b/fs/ubifs/xattr.c
+index 96f3448..fd65b3f 100644
+--- a/fs/ubifs/xattr.c
++++ b/fs/ubifs/xattr.c
+@@ -652,11 +652,8 @@ int ubifs_init_security(struct inode *dentry, struct inode *inode,
+ {
+ 	int err;
+ 
+-	mutex_lock(&inode->i_mutex);
+ 	err = security_inode_init_security(inode, dentry, qstr,
+ 					   &init_xattrs, 0);
+-	mutex_unlock(&inode->i_mutex);
+-
+ 	if (err) {
+ 		struct ubifs_info *c = dentry->i_sb->s_fs_info;
+ 		ubifs_err(c, "cannot initialize security for inode %lu, error %d",
+-- 
+1.8.4.5
+
+  
