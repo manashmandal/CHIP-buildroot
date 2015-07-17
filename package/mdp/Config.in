@@ -1,0 +1,6 @@
+config BR2_PACKAGE_MDP
+	bool "MDP"
+	help
+	  A command-line based markdown presentation tool
+
+	  https://github.com/visit1985/mdp
