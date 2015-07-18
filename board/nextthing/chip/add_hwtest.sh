@@ -38,4 +38,4 @@ MMMMMMM                        .MMMMMMM:\n\
           MM      MMM     .MM           \n\
           .Z       M      .O            \n\
 \n\
-" > ${TARGET_DIR}=/etc/issue
+" >${TARGET_DIR}/etc/issue
